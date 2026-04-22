@@ -1,0 +1,146 @@
+// =============================================================================
+// main.scss – Styles globaux
+// =============================================================================
+
+// ── Police Graphik (à adapter selon la licence / l'hébergement) ───────────────
+// Si vous disposez des fichiers .woff2, décommentez et ajustez le chemin :
+// @font-face {
+//   font-family: 'Graphik';
+//   src: url('/fonts/Graphik-Regular.woff2') format('woff2');
+//   font-weight: 400;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Graphik';
+//   src: url('/fonts/Graphik-Medium.woff2') format('woff2');
+//   font-weight: 500;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Graphik';
+//   src: url('/fonts/Graphik-Semibold.woff2') format('woff2');
+//   font-weight: 600;
+//   font-display: swap;
+// }
+
+// ── Bootstrap ────────────────────────────────────────────────────────────────
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+// ── Composants ───────────────────────────────────────────────────────────────
+@import 'components/header';
+@import 'components/footer';
+@import 'components/card';
+@import 'components/buttons';
+@import 'components/forms';
+
+// ── Base ─────────────────────────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $color-light;
+  color: $color-dark;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Skip-link pour l'accessibilité (WCAG 2.1)
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background: $color-blue-dark;
+  color: $color-white;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s;
+
+  &:focus {
+    top: 0.5rem;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+// Focus visible global (WCAG 2.1)
+:focus-visible {
+  @include focus-outline;
+  border-radius: 2px;
+}
+
+// ── Utilitaires ───────────────────────────────────────────────────────────────
+.text-blue        { color: $color-blue !important; }
+.text-blue-dark   { color: $color-blue-dark !important; }
+.text-red         { color: $color-red !important; }
+.text-green       { color: $color-green !important; }
+.bg-light-blue    { background-color: $color-light !important; }
+.bg-blue-dark     { background-color: $color-blue-dark !important; }
+
+.section-title {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 700;
+  color: $color-blue-dark;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  height: 4px;
+  width: 56px;
+  background-color: $color-red;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+// Étoiles
+.stars {
+  color: #f5a623;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.star-empty {
+  color: $color-gray-300;
+}
+
+// Badge catégorie
+.badge-category {
+  background-color: rgba($color-blue, 0.1);
+  color: $color-blue-dark;
+  border: 1px solid rgba($color-blue, 0.25);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Spinner de chargement
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: $color-blue;
+}

@@ -1,0 +1,64 @@
+// =============================================================================
+// _variables.scss
+// Variables Sass – Palette officielle Auvergne-Rhône-Alpes x Trouve ton artisan
+// =============================================================================
+
+// ── Palette principale ────────────────────────────────────────────────────────
+$color-light:       #f1f8fc;   // Fond clair / arrière-plan général
+$color-blue:        #0074c7;   // Bleu principal – liens, CTA, éléments actifs
+$color-blue-dark:   #00497c;   // Bleu foncé – header, titres
+$color-dark:        #384050;   // Texte principal, foncé
+$color-red:         #cd2c2e;   // Accent rouge – bouton primaire, alertes
+$color-green:       #82b864;   // Vert – succès, badges, notes positives
+
+// ── Neutres ──────────────────────────────────────────────────────────────────
+$color-white:       #ffffff;
+$color-gray-100:    #f8f9fa;
+$color-gray-200:    #e9ecef;
+$color-gray-300:    #dee2e6;
+$color-gray-500:    #adb5bd;
+$color-gray-700:    #495057;
+$color-black:       #212529;
+
+// ── Surcharge Bootstrap ───────────────────────────────────────────────────────
+$primary:           $color-blue;
+$secondary:         $color-blue-dark;
+$danger:            $color-red;
+$success:           $color-green;
+$dark:              $color-dark;
+$light:             $color-light;
+$body-bg:           $color-light;
+$body-color:        $color-dark;
+$link-color:        $color-blue;
+$link-hover-color:  $color-blue-dark;
+
+// ── Typographie ───────────────────────────────────────────────────────────────
+// La police Graphik est utilisée par la région ; déclarer @font-face dans main.scss
+$font-primary:      'Graphik', 'Segoe UI', system-ui, -apple-system, sans-serif;
+$font-size-base:    1rem;       // 16px
+$font-size-sm:      0.875rem;   // 14px
+$font-size-lg:      1.125rem;   // 18px
+
+// ── Espacements ───────────────────────────────────────────────────────────────
+$spacer:            1rem;
+$border-radius:     0.5rem;     // 8px
+$border-radius-lg:  0.75rem;    // 12px
+$border-radius-xl:  1rem;       // 16px
+
+// ── Ombres ────────────────────────────────────────────────────────────────────
+$shadow-sm:         0 1px 4px rgba($color-dark, 0.06);
+$shadow-md:         0 4px 16px rgba($color-dark, 0.10);
+$shadow-lg:         0 8px 32px rgba($color-dark, 0.14);
+$shadow-hover:      0 8px 24px rgba($color-blue, 0.18);
+
+// ── Transitions ───────────────────────────────────────────────────────────────
+$transition-base:   all 0.25s ease;
+$transition-fast:   all 0.15s ease;
+
+// ── Header ────────────────────────────────────────────────────────────────────
+$header-height:     64px;
+$header-height-md:  72px;
+
+// ── Z-index ───────────────────────────────────────────────────────────────────
+$z-header:          1000;
+$z-modal:           1050;

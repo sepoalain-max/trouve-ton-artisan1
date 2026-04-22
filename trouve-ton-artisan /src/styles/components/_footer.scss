@@ -1,0 +1,83 @@
+// =============================================================================
+// _footer.scss
+// =============================================================================
+
+.site-footer {
+  background-color: $color-dark;
+  color: rgba($color-white, 0.85);
+  padding-block: 2.5rem 1.5rem;
+  margin-top: auto;
+
+  .footer-brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $color-white;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-desc {
+    font-size: $font-size-sm;
+    color: rgba($color-white, 0.6);
+    max-width: 280px;
+  }
+
+  h6 {
+    color: $color-white;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  address {
+    font-style: normal;
+    font-size: $font-size-sm;
+    line-height: 1.8;
+    color: rgba($color-white, 0.7);
+
+    a {
+      color: rgba($color-white, 0.7);
+      text-decoration: none;
+      transition: $transition-fast;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+
+    li a {
+      color: rgba($color-white, 0.65);
+      text-decoration: none;
+      font-size: $font-size-sm;
+      transition: $transition-fast;
+
+      &:hover {
+        color: $color-white;
+      }
+
+      &:focus-visible {
+        @include focus-outline;
+        outline-color: $color-white;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba($color-white, 0.12);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    color: rgba($color-white, 0.45);
+  }
+}

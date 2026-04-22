@@ -1,0 +1,147 @@
+// =============================================================================
+// _header.scss
+// =============================================================================
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  background-color: $color-blue-dark;
+  box-shadow: 0 2px 8px rgba($color-black, 0.2);
+
+  .navbar {
+    padding-block: 0;
+    min-height: $header-height;
+
+    @include respond-to('md') {
+      min-height: $header-height-md;
+    }
+  }
+
+  // Logo
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-white !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: $transition-fast;
+
+    &:hover,
+    &:focus {
+      opacity: 0.85;
+    }
+
+    .brand-logo {
+      height: 36px;
+      width: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+
+      .brand-title {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .brand-subtitle {
+        font-size: 0.65rem;
+        font-weight: 400;
+        opacity: 0.8;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  // Burger
+  .navbar-toggler {
+    border-color: rgba($color-white, 0.4);
+    padding: 0.25rem 0.5rem;
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($color-white, 0.4);
+    }
+  }
+
+  // Menu
+  .navbar-nav {
+    gap: 0.25rem;
+
+    @include respond-to('lg') {
+      align-items: center;
+    }
+
+    .nav-link {
+      color: rgba($color-white, 0.9) !important;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: $border-radius;
+      transition: $transition-fast;
+      text-decoration: none;
+
+      &:hover,
+      &.active {
+        background-color: rgba($color-white, 0.15);
+        color: $color-white !important;
+      }
+
+      &:focus-visible {
+        @include focus-outline;
+        outline-color: $color-white;
+      }
+    }
+  }
+
+  // Barre de recherche
+  .search-form {
+    .input-group {
+      border-radius: $border-radius;
+      overflow: hidden;
+      box-shadow: $shadow-sm;
+    }
+
+    .search-input {
+      border: 2px solid transparent;
+      font-size: $font-size-sm;
+      min-width: 200px;
+      background: rgba($color-white, 0.1);
+      color: $color-white;
+      padding: 0.45rem 0.75rem;
+
+      &::placeholder {
+        color: rgba($color-white, 0.55);
+      }
+
+      &:focus {
+        background: rgba($color-white, 0.2);
+        border-color: rgba($color-white, 0.5);
+        box-shadow: none;
+        color: $color-white;
+        outline: none;
+      }
+    }
+
+    .search-btn {
+      background: $color-blue;
+      border: none;
+      color: $color-white;
+      padding: 0.45rem 0.9rem;
+      transition: $transition-fast;
+
+      &:hover {
+        background: darken($color-blue, 8%);
+      }
+    }
+  }
+}
